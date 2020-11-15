@@ -112,14 +112,14 @@ SCENARIO("It should be possible to run compute shaders on the gpu using vulkan",
 
     THEN("it should be updated if using other values") {
       program
-    .withSpecializations(8.32f, 15, false)
-    .withWorkGroups(count)
-    (output);
+        .withSpecializations(8.32f, 15, false)
+        .withWorkGroups(count)
+        (output);
 
-    auto outputVec = output.toVector();
-    REQUIRE(outputVec[0] == 8.32f);
-    REQUIRE(outputVec[1] == 15.0f);
-    REQUIRE(outputVec[2] == -42.0f);
+      auto outputVec = output.toVector();
+      REQUIRE(outputVec[0] == 8.32f);
+      REQUIRE(outputVec[1] == 15.0f);
+      REQUIRE(outputVec[2] == -42.0f);
     }
   }
   GIVEN("a simple program") {

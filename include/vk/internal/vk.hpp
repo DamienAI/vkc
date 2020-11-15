@@ -82,7 +82,7 @@ namespace Vk {
         , shader(device.createShader(shaderFilename))
         {}
 
-        ~ComputeProgramBase() {
+        virtual ~ComputeProgramBase() {
           release();
         }
 

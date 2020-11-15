@@ -17,7 +17,7 @@ namespace Vk {
 
   template<class Specs=typelist<>, class Constants=typelist<>>
   class ComputeProgram {
-    ComputeProgram(Vk::api::Device& device, const std::string& filename) {
+    ComputeProgram(Vk::api::Device&, const std::string&) {
       // TODO ensure this is correct definition, do we really need this ?
       // Specializations should be enough
     }
